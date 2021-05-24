@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {path: 'home', component: PortafolioComponent },
-  {path: 'item', component: ItemComponent },
+  {path: 'item/:id', component: ItemComponent },
+  {path: 'search/:termino', component: SearchComponent },
   {path: 'about', component: AboutComponent },
   {path: '**', pathMatch:'full', redirectTo: 'home' }
 ];
